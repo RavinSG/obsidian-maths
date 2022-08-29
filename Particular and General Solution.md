@@ -1,5 +1,5 @@
 ---
-aliases: [particular, general]
+aliases: [particular solution, general]
 tags: []
 ---
 
