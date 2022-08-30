@@ -29,8 +29,8 @@ We can think of the *inner operation* as a form of *addition*, and the *outer op
 
 The elements $x \in {V}$ are called vectors.
 
-
-[[Vector Subspaces]]
+- [[Vector Subspaces]]
+- [[Linear Independence]]
 
 
 
