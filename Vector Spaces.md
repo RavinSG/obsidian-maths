@@ -32,6 +32,8 @@ The elements $x \in {V}$ are called vectors.
 - [[Vector Subspaces]]
 - [[Linear Independence]]
 - [[Basis]] and [[Rank]]
+- [[Linear Mappings]]
+- 
 
 
 
