@@ -26,8 +26,13 @@ B=b_{i}(o_{t}) \ \ \ \ \ & \text{a sequence of obsersavation likehoods, also cal
 & \text{probability that the Markov chain will start in state $i$.} \\
 &\sum\limits_{i=1}^{n}\pi_{i}=1
 \end{align*}
-$$
+>$$
 
 With a first-order Markov chain, the probability of a particular state depends only on the previous state. ([[Markov Assumption]])
 
 The probability of an output observation $o_{i}$ depends only on the state that produced the observation $q_{i}$ and not on any other sates or any other observations. ([[Output Independence]])
+
+Markov models can be characterised by three fundamental problems:
+- *Likelihood* - Given an HMM $\lambda=(A,B)$ and an observation sequence $O$, determine the likelihood $P(O|\lambda)$ ^LikelihoodCalculation
+- *Decoding* - Given an observation sequence $O$ and an HMM $\lambda=(A,B)$, discover the best hidden state sequence $Q$
+- *Learning* - Given an observation sequence $O$ and the set of states in the HMM, learn the HMM parameters $A$ and $B$
