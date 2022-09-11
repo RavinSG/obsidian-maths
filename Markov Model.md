@@ -5,4 +5,3 @@ tags: []
 
 # Markov Model
 
-sd
