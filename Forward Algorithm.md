@@ -27,3 +27,15 @@ $$
 && &\text{the current state $j$} 
 \end{align*}
 $$
+- ### Initialisation
+$$
+\alpha_{1}(j)=\pi_{j}b_{j}(o_{1}) \ \ \ \ \ 1 \le j \le N
+$$
+- ### Recursion
+$$
+\alpha_{t}(j) = \sum\limits_{i=1}^{N}\alpha_{t-1}a_{ij}b_{j}(o_{t}); \ \ \  1 \le j \le N, 1<t \le T
+$$
+- ### Termination
+$$
+P(O|\lambda) = \sum\limits_{i=1}^{N}\alpha_{T}(i)
+$$
