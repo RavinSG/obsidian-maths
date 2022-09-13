@@ -35,4 +35,5 @@ The probability of an output observation $o_{i}$ depends only on the state that 
 Markov models can be characterised by three fundamental problems:
 - *Likelihood* - Given an HMM $\lambda=(A,B)$ and an observation sequence $O$, determine the likelihood $P(O|\lambda)$ ^LikelihoodCalculation
 - *Decoding* - Given an observation sequence $O$ and an HMM $\lambda=(A,B)$, discover the best hidden state sequence $Q$ ^DecodingTask
-- *Learning* - Given an observation sequence $O$ and the set of states in the HMM, learn the HMM parameters $A$ and $B$
+- *Learning* - Given an observation sequence $O$ and the set of states in the HMM, learn the HMM parameters $A$ and $B$ ^HMMTraining
+
