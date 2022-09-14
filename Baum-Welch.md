@@ -73,7 +73,7 @@ P(X|Y,Z) = \frac {P(X,Y|Z)}{P(Y|Z)}
 $$
 we divide $\tilde{\upxi_{t}}$ by $P(O|\lambda)$:
 $$
-{\frac{\tilde{\upxi_{t}}(i,j)}{P(O|\lambda)}} = \frac{P(q_{t}=i, q_{t+1}=j,O|\lambda)}{P(O|\lambda)} = P(q_{t}=i, q_{t+1}=j|O,\lambda) = \upxi_{t}(i,j)
+{\frac{\tilde{\upxi}_{t}(i,j)}{P(O|\lambda)}} = \frac{P(q_{t}=i, q_{t+1}=j,O|\lambda)}{P(O|\lambda)} = P(q_{t}=i, q_{t+1}=j|O,\lambda) = \upxi_{t}(i,j)
 $$
 The probability of the observation given the model is simply the forward probability of the whole utterance (or the backward probability of the whole utterance):
 $$
@@ -85,7 +85,37 @@ $$
 $$
 To get the total expected number of transitions from state $i$, we can sum over all transitions out of state $i$. Therefore, the final formula for $\hat{a}_ij$ is:
 $$
-\hat{a_{ij}}= \frac {\sum\limits_{t=1}^{T-1} \upxi_{t}(i,j)}{\sum\limits_{t=1}^{T-1} \sum\limits_{k=1}^{N}\upxi_{t}(i,k)}
+\hat{a}_{ij}= \frac {\sum\limits_{t=1}^{T-1} \upxi_{t}(i,j)}{\sum\limits_{t=1}^{T-1} \sum\limits_{k=1}^{N}\upxi_{t}(i,k)}
 $$
 ### Observation Probability
+
+This is the probability of a given symbol $v_{k}$ from the observation vocabulary $V$, given a state $j$: $\hat{b}_{j}(v_{k})$. We can compute this by,
+$$
+\hat{b}_j(v_{k}) = \frac {\text{expected number of times in state $j$ observinf symbol $v_{k}$}} {\text{expected number of times in state $j$}}
+$$
+
+For this, we need to know the probability of being in state $j$ at time $t$, which is denoted as $\gamma_{t}(j)$:
+$$
+\gamma_{t}(j) = P(q_{t}=j|O,\lambda)
+$$
+We can compute this by including the observation sequence in the probability:
+$$
+\gamma_{t}(j) = \frac{P(q_{t}=j,O|\lambda)}{P(O|\lambda)}
+$$
+The value of the numerator is simply the product of the forward probability and the backward probability:
+$$
+\gamma_{t}(j) = \frac{\alpha_{t}(j)\beta_{t}(j)}{P(O|\lambda)}
+$$
+Therefore,
+$$
+\hat{b}_j(v_{k}) = \frac{\sum\limits_{t=1\ s.t\  O_{t}=v_{k}}^{T}\gamma_{t}(j)}{\sum\limits_{t=1}^{T}\gamma_{t}(j)}
+$$
+
+With these two equations we can re-estimate the transition $A$ and emission $B$ probabilities from an observed sequence $O$, assuming we have a previous estimate of $A$ and $B$.
+
+### Iterative Forward and Backward Algorithm
+
+The forward-backward algorithm has two steps:
+- *Expectation* step or *E-step*: Compute the expected state occupancy count $\gamma$ and the expected transition state count $\upxi$ from earlier $A$ and $B$ probabilities
+- *Maximisation* step or *M-step*: User $\gamma$ and $\upxi$ to recompute new $A$ and $B$ probabilities
 
