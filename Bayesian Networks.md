@@ -1,5 +1,5 @@
 ---
-aliases: [BN, BNs]
+aliases: [BN, BNs, Bayesian Network]
 tags: []
 ---
 
@@ -7,7 +7,7 @@ tags: []
 
 Despite the name, Bayesian networks do not necessarily imply a commitment to Bayesian statistics.
 
-Indeed, it is common to use frequentists methods to estimate the parameters of the CPDs.
+Indeed, it is common to use frequentists methods to estimate the parameters of the [[Representation#^CPD|CPD]].
 
 Rather, they are so called because they *use Bayes' rule* for *probabilistic inference*.
 

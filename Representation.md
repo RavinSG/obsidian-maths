@@ -11,9 +11,9 @@ Probabilistic graphical models are graphs in which nodes represent random variab
 
 **Directed graphical models** also called [[Bayesian Networks]] or *Belief Networks*(BNs), have a more complicated notion of independence, which takes into account the directionality of the arcs.
 
-In addition to the graph structure, it is necessary to *specify the parameters* of the model. For a *directed model*, we must specify the *Conditional Probability Distribution* (CPD) at each node.
+In addition to the graph structure, it is necessary to *specify the parameters* of the model. For a *directed model*, we must specify the *Conditional Probability Distribution* (CPD) at each node. ^CPD
 
-If the variables are *discrete*, this can be represented as a *table* (CPT), which lists the probability that the child node takes on each of its different values for each combination of values of its parents.
+If the variables are *discrete*, this can be represented as a *table* (CPT), which lists the probability that the child node takes on each of its different values for each combination of values of its parents. ^CPT
 
 Consider the following example, in which all nodes are binary, i.e., have *two possible values*, which we will denote by T (true) and F (false).
 
