@@ -46,5 +46,31 @@ When an app (or system) is compromised means the risk state of the app (or syste
 
 Let $\mathbf{S}$ denote a set of risks, $\mathcal{A}: \mathbf{S} \times \mathbf{S} \rightarrow [0,1]$ denote a set of relationships in $\mathbf{S}$. Then given $S_{pre},S_{post} \in S$, we have a : $S_{pre}\mapsto S_{post}$ is called an atomic risk if,
 1. $S_{pre} \neq S_{post}$ 
-2. given $S_{pre}= 1$, $S_{post}=1$ with probability $\mathcal{A}(S_{pre},S_{post}) > 1$ 
+2. given $S_{pre}= 1$, $S_{post}=1$ with probability $\mathcal{A}(S_{pre},S_{post}) > 0$ 
 3. $\nexists \ S_{1}, \dots ,S_{j} \in S - \{S_{pre},S_{post}\}$  
+
+## Bayesian Risks Graph
+
+A BRG is s a tuple $(S,\upxi,\mathcal{T})$, in which $S = R_{B} \cup R_{D}\cup R_{S}$ denotes the set of attributes from three risk layers: $R_{B}, R_{D,}\text{and } R_{S}$ denotes the risks from *behaviour layer*, *dynamic layer*, and *static layer* respectively. 
+
+$\upxi \subseteq S \times S$ denotes the space of risks. A risk states pair $S_{pre}, S_{post} \in \mathcal{T}$ if $S_{pre} \mapsto S_{post} \in \mathcal{A}$. Furthermore, for $S_{i}\in S$, the set $Pa[S_{i}] =\{S_{j}\in S|(S_{j},S_{i}) \in \upxi\}$   
+
+![[Atomic_Risks.png]]
+
+The above image shows a simple BRG example, in which the risk $r_{a}$ could be caused by sub-risks $r_b$ and(or) $r_c$, iteratively $r_b$ could be redivided into $r_e$ and $r_d$, where $r_d$, $r_e$, and $r_c$ are atom risks and could not be further divided.
+
+The basic idea of the BRG is to calculate the probability of $r_a$ according to its parental conditional probabilities.
+
+## Risk Combination
+
+For risk $S_{j}$ in a BRG we have $S_{j} \in S_{B} \cup S_{D}\cup S_{S}$, assume that $S_{i}\in Pa[S_{j}]$, then there are two kinds of possibilities for risk combination: **AND**-combination and **OR**-combination.
+
+![[Risk_Combinations.png]]
+
+The probability could be defined as:
+$$
+Pr(S_{i}|Pa[S_{i}]) = \begin{cases}
+Pr(\cap_{S_{i}=1}(a_{i})), &AND \\
+Pr(\cup_{S_{i}=1}(a_{i})), &OR
+\end{cases}
+$$

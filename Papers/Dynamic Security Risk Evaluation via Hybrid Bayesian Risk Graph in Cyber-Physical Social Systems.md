@@ -25,3 +25,23 @@ The social systems security are facing severe’ security challenges,
 2. A Bayesian risks graph ([[Bayesian Risks Graph|BRG]]) model is introduced in the top layer to analyse the potential risks that the activities can cause. The BRG model is able to classify the user activities into three levels (static, dynamic, and behaviour) and can dynamically evaluate the potential risks that caused by user activities
 3. A node mapping scheme is proposed that can map the HMMs in the bottom layer to the Bayesian nodes in the BRG model
 
+## Hybrid Bayesian Risk Model
+
+- ### Threats and Risks in CPPS
+Attackers can collect sensitive privacy information from users’ profile by combining different pieces of information in many different ways.
+
+Generally, the possible attacks  can be grouped into two categories:
+1. Vertical attacks that focus on a specific social network site or specific user
+2. Horizontal attacks, which focus on the crosscorrelation networks to mine the sensitive information that might be useful for committing attacks.
+
+The information might come from multiple different sources (such as social networks, emails, IoT, interested forums).
+
+It is necessary to develop a security risk/threat analysis model by incorporating the social network influence as perceived by the users, which should be designed to be able to identify the major factor leading the security risks in real time.
+
+- ### Hybrid Bayesian Risk Model
+
+![[Hybrid_Bayesian_Risk_Model.png]]
+
+The hybrid Bayesian risk model has a two-layer and interconnected architecture as shown above.
+- h
+- 
