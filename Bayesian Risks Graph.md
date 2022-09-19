@@ -47,4 +47,4 @@ When an app (or system) is compromised means the risk state of the app (or syste
 Let $\mathbf{S}$ denote a set of risks, $\mathcal{A}: \mathbf{S} \times \mathbf{S} \rightarrow [0,1]$ denote a set of relationships in $\mathbf{S}$. Then given $S_{pre},S_{post} \in S$, we have a : $S_{pre}\mapsto S_{post}$ is called an atomic risk if,
 1. $S_{pre} \neq S_{post}$ 
 2. given $S_{pre}= 1$, $S_{post}=1$ with probability $\mathcal{A}(S_{pre},S_{post}) > 1$ 
-3. $\nexists$ 
+3. $\nexists \ S_{1}, \dots ,S_{j} \in S - \{S_{pre},S_{post}\}$  
