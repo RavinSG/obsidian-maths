@@ -5,7 +5,7 @@ tags: []
 
 # Matrix Representation of Linear Mappings
 
-We consider a basis $\{b_{1}, \dots , b_n\}$ of an $n$-dimensional vector space $V$ . In the
+We consider a [[Basis]] $\{b_{1}, \dots , b_n\}$ of an $n$-dimensional vector space $V$ . In the
 following, the order of the basis vectors will be important. Therefore, we
 write
 $$
