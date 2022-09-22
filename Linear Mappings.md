@@ -50,6 +50,9 @@ It also justifies to treat $\mathbb{R}^{m\times n}$ (the vector space of $m \tim
 >- If $\Phi:V \rightarrow W$ is an isomorphism, then $\Phi^{-1}:W \rightarrow V$ is an isomorphism, too
 >- If $\Phi: V \rightarrow W, \Psi: V \rightarrow W$ are linear, then $\Phi + \Psi$ and $\lambda\Phi, \lambda \in \mathbb{R}$ are linear too
 
-[[Matrix Representation of Linear Mappings]]
+- [[Matrix Representation of Linear Mappings]]
+- [[Basis Change]]
+- 
+
 
 
