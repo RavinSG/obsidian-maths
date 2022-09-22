@@ -43,5 +43,41 @@ It is necessary to develop a security risk/threat analysis model by incorporatin
 ![[Hybrid_Bayesian_Risk_Model.png]]
 
 The hybrid Bayesian risk model has a two-layer and interconnected architecture as shown above.
+
+In the bottom layer, the HMM is used to model the activities of a user in the dynamic social network, which describes the states, observations, and the aggregation of influences of neighbouring nodes.
+
+The [[Hidden Markov Models|HMM]] is powerful for modelling users’ activity evolution in social networks according to a Markov chain with a hidden state that is influenced by the collective activity of the neighbouring of the user.
+
+Meanwhile, the [[Bayesian Risks Graph|BRG]] network is a probabilistic graphical model that represents a set of featured risks and their conditional dependencies via a directed acyclic graph (DAG).
+
+## HMMs
+Since the *user activity in social network*s has distinctly *non-Poissonian characteristics* furthermore, the *activities of neighbouring users* (followers, friends in social network) can significantly *affect user activity*, the HMM can well describe the user activity and explicitly take into account the *interaction between the users* by introducing a *coupling* between two *stochastic processes*.
+
+The work in [[Information Integration via Hierarchical and Hybrid Bayesian Networks|paper]] shows that the coupling HMMs can well model a probabilistic process of status and the interactions between these activities.
+
+- In social networks, the user activity has the following features:
+	- The activity of users are dynamic
+	- The individual activity may be preferentially affected by other linked users (such as followers, friends, or even some unlinked users)
+	- The states of users are unobservable
+
+The HMM is able to model the *hidden states*, which *correspond* to *different patterns in user activity*.
+
+In social networks, the state transition can be influenced by its neighbours and it is possible to explain the observed data and predict the future activity of a user
+
+With a learning model, the HMM can *cluster users* and find the resulting cluster structure *allowing* intuitive *characterisation* of the users in terms of the *interaction dynamics* between a user and their social network.
+
+- In this paper, the user dynamic activity in a social network can be modelled by the following three components:
+	1. User states
+	2. Observation density
+	3. Influence of neighbours
+
+A tuple $H_{i}= \{{Q_{i}},\mathcal{T_{i}},{Z_{i}}\}$ is used to represent an HMM $H_{i}$
+
+Let $t = \{t_{1}, t_{2}, \dots, t_{N}\}$ denote the time-stamps of a specific user’s activities over a given period of interest. The time duration $\mathcal{T} = \{\tau_{i}= t_{i}-t_{i-1}|i=1,2,\dots,N\}$
+
+- ### User States
+In an HBRG, $Q_{i}$ is used to denote the states of a user $i$, which could be active $(Q_{i} = 1)$ or inactive $(Q_{i}=0)$
+
+Let $Q_{i}\ in \{0,1\}(i=1,\dots,N)$ denote the states of a user
 - h
 - 
