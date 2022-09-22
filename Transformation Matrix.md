@@ -16,7 +16,12 @@ tags: []
 >$$ 
 >the transformation matrix of $\Phi$ (with respect to the ordered bases $B$ of $V$ and $C$ of $W$).
 
+The coordinates of $\Phi(b_{j})$ with respect to the ordered basis $C$ of $W$ are the $j$-th column of $A_{\Phi}$.
 
+If $\hat{x}$ is the coordinate vector of $x \in V$ with respect to basis $B$ and $\hat{y}$ the coordinate vector of $y=\Phi(x)$ with respect to $C$, then
+$$
+\hat y = A_{\Phi}\hat x
+$$
 
 
 
