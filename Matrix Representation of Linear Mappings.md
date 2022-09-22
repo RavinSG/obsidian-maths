@@ -11,8 +11,10 @@ write
 $$
 B = (b_{1}, \dots,b_{n})
 $$
+and call this $n$-tuple an *ordered basis* of V.
+
 >[!tip] Definition - Coordinates
->Consider a vector space $V$ and ad ordered basis $B=(b_{1},\dots ,b_{n})$ of $V$. For any $x \in V$ we obtain a unique representation (linear combination)
+>Consider a vector space $V$ and an ordered basis $B=(b_{1},\dots ,b_{n})$ of $V$. For any $x \in V$ we obtain a unique representation (linear combination)
 >$$
 >x = \alpha_{1}b_{1} +\dots + \alpha_{n}b_{n}
 >$$

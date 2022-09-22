@@ -78,6 +78,26 @@ Let $t = \{t_{1}, t_{2}, \dots, t_{N}\}$ denote the time-stamps of a specific us
 - ### User States
 In an HBRG, $Q_{i}$ is used to denote the states of a user $i$, which could be active $(Q_{i} = 1)$ or inactive $(Q_{i}=0)$
 
-Let $Q_{i}\ in \{0,1\}(i=1,\dots,N)$ denote the states of a user
-- h
-- 
+Let $Q_{i}\ in \{0,1\}(i=1,\dots,N)$ denote the states of a user, the state of $Q_i$ is dependent only on $Q_{i−1}$, and we have
+$$
+\begin{align*}
+P_{0}&= \begin{bmatrix}1-p_{0} & p_0\\
+q_{0}& 1-q_{0}  \end{bmatrix}\\
+\text{and} \\
+P_{1}&= \begin{bmatrix}1-p_{1} & p_1\\
+q_{1}& 1-q_{1}  \end{bmatrix}\\
+\end{align*}
+$$
+in which $p_{0}$ and $q_{0}$ denote probabilities from the inactive state to the active state.
+
+- ### Observation
+The observations $\mathcal{T} = \{\tau_{1}, \tau_{2}, \dots, \tau_N\}$ are a *series of activities* among suspicious users, tweets, and things with a time stamp associated with each link between two entities in social networks.
+
+- ### Influence of Neighbours
+The evolution of $Q_i$ is also influenced by other users in social networks (such as friends, followers, etc.) through activities such as post, reply, like, retweet, and comment.
+
+$Z_i$ is used to represent the influence of the neighbours, which can be described as
+$$
+P(Q_{i}|Q_{i-1},Z_{i}) = P_{0}(Q_{i}|Q_{i-1})\cdot(1 - \phi(Z_{i})) + P_{1}(Q_{i}|Q_{i-1})\cdot\phi(Z_{i}))
+$$
+in which $\phi(Z):Z\mapsto[0,1]$ is assumed as the simplified capture of the evolution of $Q_{i}$ 
