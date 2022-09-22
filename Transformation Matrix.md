@@ -22,7 +22,6 @@ If $\hat{x}$ is the coordinate vector of $x \in V$ with respect to basis $B$ and
 $$
 \hat y = A_{\Phi}\hat x
 $$
-q
 
 
 
