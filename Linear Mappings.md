@@ -45,14 +45,14 @@ This states that there exists a linear, bijective mapping between two vector spa
 
 It also justifies to treat $\mathbb{R}^{m\times n}$ (the vector space of $m \times n$ matrices) and $\mathbb{R^{mn}}$ (the vector space of length $mn$) the same, as their dimensions are $mn$, and there exists a linear, bijective mapping that transforms one into the other.
 
->[!example] Remark
+>[!info] Remark
 >- For linear mappings $\Phi: V \rightarrow W$ and $\Psi: W \rightarrow X$, the mapping $\Psi \circ \Phi: V \rightarrow X$ is also linear
 >- If $\Phi:V \rightarrow W$ is an isomorphism, then $\Phi^{-1}:W \rightarrow V$ is an isomorphism, too
->- If $\Phi: V \rightarrow W, \Psi: V \rightarrow W$ are linear, then $\Phi + \Psi$ and $\lambda\Phi, \lambda \in \mathbb{R}$ are linear too
+>- If $\Phi: V \rightarrow W, \Psi: V \rightarrow W$ are linear, then $\Phi + \Psi$ and $\lambda\Phi, \lambda \in \mathbb{R}$ are linear too ^extension
 
 - [[Matrix Representation of Linear Mappings]]
 - [[Basis Change]]
-- 
+- [[Image and Kernel]]
 
 
 

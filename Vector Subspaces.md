@@ -20,6 +20,6 @@ To determine whether $(\mathcal{U},+,\cdot)$ is a subspace of $V$ we still do ne
 	- With respect to the outer operation: $\forall \lambda \in \mathbb{R} \space \forall x \in \mathcal{U}:\lambda x \in \mathcal{U}$  
 	- With respect to the inner operation: $\forall x,y \in \mathcal{U}: x + y \in \mathcal{U}$
 
->[!example] Remark
+>[!info] Remark
 >Every subspace $U \in (\mathbb{R}, +, \cdot)$ is the solution space of a [[Homogeneous Linear Equations|homogeneous]] system of linear equations $\mathbf{A}x = 0$ for $x \in \mathbb{R}^n$
 

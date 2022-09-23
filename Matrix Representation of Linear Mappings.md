@@ -27,7 +27,7 @@ and call this $n$-tuple an *ordered basis* of V.
 ![[Two_Coordinate_Systems.png]]
 Two different coordinate systems defined by two sets of basis vectors. A vector $x$ has different coordinate representations depending on which coordinate system is chosen.
 
->[!example] Remark
+>[!info] Remark
 >For an $n$-dimensional vector space $V$ and an ordered basis $B$ of $V$, the mapping $\Phi: \mathbb{R}^{n}\rightarrow V, \Phi(e_{i}) = b_{i}, i = 1, \dots ,n$ is linear(from [[Linear Mappings#^Theorm2-17|Theorem]]), where $(e_{1}, \dots , e_{n})$ is the standard basis of $\mathbb{R}^n$.
 
 [[Transformation Matrix]]

@@ -14,7 +14,7 @@ We only consider finite-dimensional vector spaces $V$. The *dimension* of $V$ is
 
 If $U\subseteq V$ is a subspace of $V$, then $dim(U) \leq dim(V)$ and $dim(U)=dim(V)$ if and only if $U=V$.
 
->[!example] Remark
+>[!info] Remark
 >A basis of subspace $U=span[x_{1},\dots,x_{2}] \in \mathbb{R}^n$ can be found by executing the following steps:
 >1. Write the spanning vectors as columns of a matrix $A$
 >2. Determine the row-echelon form of $A$
